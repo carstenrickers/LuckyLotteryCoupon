@@ -23,11 +23,11 @@ namespace LuckyLotteryCouponApp
             if (numberOfThreads != 1)
                 throw new ArgumentException("We unly support one thread");
 
-            LotteryCoupon lotteryCoupon;
+            var lotteryCoupon = LotteryCouponGenerator.CreateEmptyLotteryCoupon();
             long numberOfAttempts = 0;
             do
             {
-                lotteryCoupon = LotteryCouponGenerator.CreateLotteryCoupon();
+                LotteryCouponGenerator.RefillLotteryCoupon(lotteryCoupon);
                 numberOfAttempts += 1;
             }
             while (!LotteryCouponChecker.Check(lotteryCoupon));

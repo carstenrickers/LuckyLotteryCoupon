@@ -18,6 +18,11 @@ namespace LuckyLotteryCouponApp
             RandomNumberGenerator = randomNumberGenerator;
         }
 
+        public LotteryCoupon CreateEmptyLotteryCoupon()
+        {
+            return new LotteryCoupon(NumberOfRows, NumberOfColumns);
+        }
+
         public LotteryCoupon CreateLotteryCoupon()
         {
             var rows = new List<List<int>>(NumberOfRows);
@@ -31,6 +36,18 @@ namespace LuckyLotteryCouponApp
                 rows.Add(row);
             }
             return new LotteryCoupon(rows);
+        }
+
+        public void RefillLotteryCoupon(LotteryCoupon lotteryCoupon)
+        {
+            for (int r = 0; r < lotteryCoupon.Rows.Count; r++)
+            {
+                var row = lotteryCoupon.Rows[r];
+                for (int c = 0; c < row.Count; c++)
+                {
+                    row[c] = RandomNumberGenerator.Next();
+                }
+            }
         }
     }
 }
