@@ -7,7 +7,7 @@ namespace LuckyLotteryCouponApp
     {
         static void Main(string[] args)
         {
-            int numberOfThreads = 10;
+            int numberOfThreads = Environment.ProcessorCount;
             var config = LuckyLotteryCouponConfigReader.Read();
             var stopwatch = new Stopwatch();
 
