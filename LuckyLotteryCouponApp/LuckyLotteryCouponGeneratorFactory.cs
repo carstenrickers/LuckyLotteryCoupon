@@ -12,8 +12,10 @@ namespace LuckyLotteryCouponApp
 
         public LuckyLotteryCouponGeneratorFactory(LuckyLotteryCouponConfiguration config)
         {
-            randomNumberGenerator = new CryptoRandomNumberGenerator(config.MaxNumber);
-            // randomNumberGenerator = new StandardRandomNumberGenerator(config.MaxNumber);
+            if (config.RandomGenerator == RandomNumberGeneratorTypeEnum.STANDARD)
+                randomNumberGenerator = new StandardRandomNumberGenerator(config.MaxNumber);
+            else
+                randomNumberGenerator = new CryptoRandomNumberGenerator(config.MaxNumber);
             lotteryCouponGenerator = new LotteryCouponGenerator(config.NumberOfRows, config.NumberOfColumns, randomNumberGenerator);
             lotteryCouponChecker = new LuckyLotteryCouponChecker(config.LuckyNumber);
         }

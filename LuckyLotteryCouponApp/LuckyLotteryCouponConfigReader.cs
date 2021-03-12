@@ -11,6 +11,11 @@ namespace LuckyLotteryCouponApp
         public static LuckyLotteryCouponConfiguration Read()
         {
             var config = new LuckyLotteryCouponConfiguration();
+
+            /* We may later add config options in the config file for selecting the type of the random number generator.
+               Now we just use a hard coded value. */
+            config.RandomGenerator = RandomNumberGeneratorTypeEnum.CRYPTO;
+
             try
             {
                 string luckyNumberStr = ConfigurationManager.AppSettings["LuckyNumber"];
