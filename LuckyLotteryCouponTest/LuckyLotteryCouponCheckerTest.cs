@@ -4,7 +4,7 @@ using Xunit;
 
 namespace LuckyLotteryCouponTest
 {
-    public class LuckyLottertCouponCheckerTest
+    public class LuckyLotteryCouponCheckerTest
     {
         [Fact]
         public void TestLuckyLotteryCouponCheckerReturnsTrueOnLuckyCoupon()
