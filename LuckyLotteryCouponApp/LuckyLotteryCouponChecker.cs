@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LuckyLotteryCouponApp
 {
-    class LuckyLotteryCouponChecker : ILotteryCouponChecker
+    public class LuckyLotteryCouponChecker : ILotteryCouponChecker
     {
         private int LuckyNumber;
         public LuckyLotteryCouponChecker(int luckyNumber)
