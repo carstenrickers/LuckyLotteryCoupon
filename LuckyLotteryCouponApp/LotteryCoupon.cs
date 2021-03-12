@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace LuckyLotteryCouponApp
 {
@@ -13,6 +11,7 @@ namespace LuckyLotteryCouponApp
 
         public LotteryCoupon(int numberOfRows, int numberOfColumns)
         {
+            /* Create an empty lottery coupon with zero in all rows and columns. */
             Rows = new List<List<int>>(numberOfRows);
             for (int r = 0; r < numberOfRows; r++)
             {

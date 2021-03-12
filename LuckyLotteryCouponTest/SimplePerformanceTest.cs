@@ -43,7 +43,7 @@ namespace LuckyLotteryCouponTest
                 }
             }
             double totalAverageTimeInNanoseconds = totalElapsedMilliseconds * 1000.0 / totalNumberOfAttempts;
-            Assert.True(totalAverageTimeInNanoseconds < 40.0);
+            Assert.True(totalAverageTimeInNanoseconds < 500.0);
             // Console.WriteLine(String.Format("{0} Test runs, attempts: {1}, average time {2} ns", numberOfTestRuns, totalNumberOfAttempts, totalAverageTimeInNanoseconds));
         }
 

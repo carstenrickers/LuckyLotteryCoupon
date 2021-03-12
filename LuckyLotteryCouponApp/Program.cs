@@ -12,7 +12,6 @@ namespace LuckyLotteryCouponApp
             var stopwatch = new Stopwatch();
 
             do {
-                numberOfThreads = 1; // We only support one thread as a start
                 PrintStartMessage(config);
 
                 stopwatch.Start();
